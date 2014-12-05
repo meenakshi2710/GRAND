@@ -27,4 +27,4 @@ def logCustomInfo(info):
 
 def logSuccessInfo(info):
     #Log the message when the test case is successful
-    print LOG_PREFIX, 'Successfully executed test case : %s' % (info)
+    print LOG_PREFIX, '***** Successfully executed test case : %s *****' % (info)
