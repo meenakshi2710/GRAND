@@ -4,12 +4,9 @@ Created on Dec 2, 2014
 @author: mesharma
 '''
 import subprocess
-from time import sleep
-
 import utilities.LogUtil as LU
-
-
 global pProcess
+from time import sleep
 
 def stop_appium_server_windows():
     LU.logSpecialInfo("cleaning up ports...")   

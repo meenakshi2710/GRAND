@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?eclipse-pydev version="1.0"?><pydev_project>
-<pydev_property name="org.python.pydev.PYTHON_PROJECT_INTERPRETER">Default</pydev_property>
-<pydev_property name="org.python.pydev.PYTHON_PROJECT_VERSION">python 2.7</pydev_property>
 <pydev_pathproperty name="org.python.pydev.PROJECT_SOURCE_PATH">
 <path>/${PROJECT_DIR_NAME}</path>
 </pydev_pathproperty>
+<pydev_property name="org.python.pydev.PYTHON_PROJECT_VERSION">python 2.7</pydev_property>
+<pydev_property name="org.python.pydev.PYTHON_PROJECT_INTERPRETER">Default</pydev_property>
 <pydev_pathproperty name="org.python.pydev.PROJECT_EXTERNAL_SOURCE_PATH">
-<path>/Users/mesharma/Downloads/AppiumSetup/java-client-2.0.0.jar</path>
-<path>/Users/mesharma/Downloads/AppiumSetup/selenium-server-standalone-2.44.0.jar</path>
-<path>/Users/mesharma/Downloads/AppiumSetup/Python27</path>
-<path>/Users/mesharma/Downloads/AppiumSetup/appium</path>
-<path>/Users/mesharma/Downloads/AppiumSetup/selenium-2.44.0.tar.gz</path>
-<path>/Users/mesharma/Downloads/AppiumSetup/selenium-2.44.0</path>
-<path>/Applications/Python 3.4</path>
-<path>/Users/mesharma/Downloads/AppiumSetup/Appium-Python-Client-0.10</path>
+<path>C:\Users\mesharma\Desktop\Android\java-client-2.0.0.jar</path>
+<path>C:\Users\mesharma\Desktop\Android\selenium-server-standalone-2.44.0.jar</path>
 </pydev_pathproperty>
 </pydev_project>

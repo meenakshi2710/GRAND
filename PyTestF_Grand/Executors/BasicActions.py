@@ -4,8 +4,6 @@ Created on Dec 2, 2014
 @author: mesharma
 '''
 import os
-
-
 def pressBtnMenu(driver):
     '''driver.execute_script("mobile: keyevent", {"keycode": 1})'''
     os.system("adb shell input keyevent 82")
