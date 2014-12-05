@@ -4,10 +4,11 @@ Created on Dec 2, 2014
 @author: mesharma
 '''
 import subprocess
+from time import sleep
+
+from appium import webdriver
 import utilities.LogUtil as LU
 global pProcess
-from time import sleep
-from appium import webdriver
 
 
 def stop_appium_server_windows():

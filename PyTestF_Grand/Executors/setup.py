@@ -3,9 +3,10 @@ Created on Nov 7, 2014
 
 @author: mesharma
 '''
-import windowsSetup as WS, macSetup as MS
-import utilities.LogUtil as LU
 import platform
+
+import utilities.LogUtil as LU
+import windowsSetup as WS, macSetup as MS
 os = platform.system()
 
 def launch_server():
@@ -14,7 +15,7 @@ def launch_server():
     if os is "Windows":
         WS.stop_appium_server_windows()
         WS.start_appium_server_windows()  
-    if os is "MAC":
+    if os is "Darwin":
         MS.stop_appium_server_mac()
         MS.start_appium_server_mac() 
 

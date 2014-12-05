@@ -5,14 +5,15 @@ Created on Nov 5, 2014
 '''
 import unittest
 
+from Executors import BasicActions as BA, CommonScenarios as CS
+import Executors.setup as S
 from Pages import LandingPage as LP, SignUpPage as SUP
 from utilities import LogUtil as LU, SignInTestInfo as STI
-import Executors.setup as S
-from Executors import CommonScenarios as CS
-LU.logSpecialInfo("Test suite started")
+
+
 from selenium.webdriver.support.wait import WebDriverWait
-from xmlrunner import XMLTestRunner
-from Executors import BasicActions as BA
+#from xmlrunner import XMLTestRunner
+LU.logSpecialInfo("Test suite started")
 
 class SignInTests(unittest.TestCase):
 
@@ -75,11 +76,11 @@ class SignInTests(unittest.TestCase):
         
         LU.logSuccessInfo("SignInFromSignUpView")
         pass
-'''
+
 if __name__ == '__main__':
     S.launch_server()        
     unittest.main()
-'''    
+    
 def trySignOut(driver):
     LU.logStepInfo("tap on Menu button")
     BA.pressBtnMenu(driver)
@@ -89,29 +90,9 @@ def trySignOut(driver):
     #wait.until(lambda driver: driver.find_element_by_xpath(LP.lnkSignOut).is_enabled())
     LU.logCustomInfo("attempting to sign out")
     driver = CS.signOut(driver)
-    
+'''    
 S.launch_server()        
 suite = unittest.TestLoader().loadTestsFromTestCase(SignInTests)
 result = XMLTestRunner(file("/Users/mesharma/Desktop/Android/pythonResults/testOut.xml", "w")).run(suite)
-
+unittest.TextTestRunner(verbosity=2).run(suite)
 '''
-    def test_tap(self):
-        driver = S.setup()
-        LU.logCustomInfo("inside tap method...")
-        
-        LandingPageIdentifier =  driver.find_element_by_id(LP.btnUpdates)
-        
-        wait = WebDriverWait(driver, 10)
-        wait.until(EC.element_to_be_clickable((By.ID, LandingPageIdentifier)))
-        
-        sleep(5)
-        driver.find_element_by_id(LP.btnUpdates).click()
-        LU.logStepInfo("tap on updates")
-        sleep(5)
-        driver.find_element_by_id(UP.findFriendLink).click()
-        LU.logStepInfo("tap on find your friends")
-        
-        LU.logSuccessInfo("tap")
-        S.tearDown(driver)
-        pass
-'''    

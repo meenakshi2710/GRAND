@@ -4,9 +4,9 @@ Created on Dec 2, 2014
 @author: mesharma
 '''
 import subprocess
+from time import sleep
 import utilities.LogUtil as LU
 global pProcess
-from time import sleep
 from appium import webdriver
 
 
@@ -36,3 +36,16 @@ def start_appium_server_mac():
 
 def mac_setup():
     #TODO
+    success = True
+    desired_caps = {}
+    desired_caps['appium-version'] = '1.0'
+    desired_caps['deviceName'] = 'Android Emulator'
+    desired_caps['platformName'] = 'Android'
+    desired_caps['platformVersion'] = '4.4'
+    desired_caps['appPackage'] = 'com.goodreads'
+    desired_caps['appActivity'] = 'com.goodreads.android.activity.MainMenuActivity'
+    desired_caps['app'] = 'C:/AppiumSetup/goodreads-android-1.12.10.apk'
+    desired_caps['autoLaunch'] = True
+    driver =  webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
+    driver.implicitly_wait(60)
+    return driver

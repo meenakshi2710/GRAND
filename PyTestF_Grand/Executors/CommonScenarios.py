@@ -6,7 +6,6 @@ Created on Dec 2, 2014
 global pProcess
 from Pages import LandingPage as LP, SignInPage as SIP
 from selenium.webdriver.support.wait import WebDriverWait
-from utilities import LogUtil as LU
 
 def signInWithEmail(driver, email, password):
     SignInPageIdentifier =  driver.find_element_by_id(SIP.txtEmail)
